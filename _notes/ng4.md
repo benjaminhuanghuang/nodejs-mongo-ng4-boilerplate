@@ -12,8 +12,17 @@ Reactive Extensions for JavaScript (RxJS) is a reactive streams library that all
 
 Zone.js is an execution context that persists across async tasks. You can think of it as thread-local storage for JavaScript VMs.
 
+## polyfiles.ts
+  Need polyfills.ts to startup app
+
 ## Script
 
 
 ## Webpack
 
+  ```
+  "build": "webpack --config webpack.config.dev.js --progress --profile --watch",
+
+  --progress  Display a compilation progress to stderr.
+  --profile   display more detailed timing information
+  ```
