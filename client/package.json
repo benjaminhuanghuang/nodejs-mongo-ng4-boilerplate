@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.common.js",
   "scripts": {
-    "build":"",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,16 +12,19 @@
   "license": "ISC",
   "dependencies": {
     "@angular/common": "^4.3.6",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/platform-server": "^4.0.0",
-    "@angular/router": "^4.0.0",
-    "@angular/upgrade": "^4.0.0"
+    "@angular/compiler": "^4.3.6",
+    "@angular/compiler-cli": "^4.3.6",
+    "@angular/animations": "^4.3.6",
+    "@angular/core": "^4.3.6",
+    "@angular/forms": "^4.3.6",
+    "@angular/http": "^4.3.6",
+    "@angular/platform-browser": "^4.3.6",
+    "@angular/platform-browser-dynamic": "^4.3.6",
+    "@angular/platform-server": "^4.3.6",
+    "@angular/router": "^4.3.6",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.4.3",
+    "zone.js": "^0.8.17"
   },
   "devDependencies": {
     "@types/core-js": "0.9.36",
