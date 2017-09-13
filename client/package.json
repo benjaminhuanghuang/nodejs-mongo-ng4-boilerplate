@@ -4,9 +4,37 @@
   "description": "",
   "main": "webpack.config.common.js",
   "scripts": {
+    "build":"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.3.6",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/platform-server": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@angular/upgrade": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/core-js": "0.9.36",
+    "@types/node": "^6.0.45",
+    "angular-router-loader": "^0.5.0",
+    "angular2-template-loader": "^0.5.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "del-cli": "^1.1.0",
+    "html-loader": "^0.4.4",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6",
+    "webpack-merge": "^4.1.0"
+  }
 }
