@@ -7,3 +7,6 @@ npm i del-cli -D
 
 ## Create angular component
   ng generate
+
+
+## webpackMerge
