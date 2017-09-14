@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
     templateUrl: './signin.component.html'
 })
 export class SigninComponent {
-    myForm: FormGroup;
+    myForm: FormGroup;   //
 
     onSubmit() {
         console.log(this.myForm);

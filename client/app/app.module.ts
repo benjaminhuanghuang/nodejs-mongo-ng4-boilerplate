@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
@@ -15,21 +15,25 @@ import { SignupComponent } from "./auth/signup.component";
 import { SigninComponent } from "./auth/signin.component";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        MessageComponent,
-        MessageListComponent,
-        MessageInputComponent,
-        MessagesComponent,
-        AuthenticationComponent,
-        HeaderComponent,
-        LogoutComponent,
-        SignupComponent,
-        SigninComponent
-    ],
-    imports: [BrowserModule, FormsModule, routing, ReactiveFormsModule],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    MessageComponent,
+    MessageListComponent,
+    MessageInputComponent,
+    MessagesComponent,
+    AuthenticationComponent,
+    HeaderComponent,
+    LogoutComponent,
+    SignupComponent,
+    SigninComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    routing,
+    ReactiveFormsModule,
+    HttpModule
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule {}

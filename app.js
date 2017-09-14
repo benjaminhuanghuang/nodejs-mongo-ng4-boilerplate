@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
+var messageRoutes = require('./routes/messages');
+var userRoutes = require('./routes/user');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/test-db', { useMongoClient: true });
@@ -32,6 +34,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use('/message', messageRoutes);
+app.use('/user', userRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler, For single page app, just render the index page
