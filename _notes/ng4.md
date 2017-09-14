@@ -26,3 +26,9 @@ Zone.js is an execution context that persists across async tasks. You can think 
   --progress  Display a compilation progress to stderr.
   --profile   display more detailed timing information
   ```
+
+## Folder structure
+  Structure the folders by feature 
+  /app/auth
+            
+  /app/message
