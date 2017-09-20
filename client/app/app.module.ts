@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
 //
 import { AppComponent } from "./app.component";
+import { AuthService } from "./auth/auth.service";
 import { MessageComponent } from "./messages/message.component";
 import { MessageListComponent } from "./messages/message-list.component";
 import { MessageInputComponent } from "./messages/message-input.component";
@@ -35,6 +36,7 @@ import { SigninComponent } from "./auth/signin.component";
     ReactiveFormsModule,
     HttpModule
   ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
