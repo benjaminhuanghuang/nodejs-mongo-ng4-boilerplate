@@ -34,4 +34,8 @@ export class MessageComponent {
     onDelete() {
         this.messageService.deleteMessage(this.message);
     }
+
+    belongsToUser() {
+        return localStorage.getItem('userId') == this.message.userId;
+    }
 }
