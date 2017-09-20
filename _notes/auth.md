@@ -35,4 +35,31 @@ router.post("/signin", function(req, res, next) {
 });
 ```
 
-## Protect route
+## Protect route at server side
+```
+var jwt = require('jsonwebtoken');
+
+//.use("/") mean each request will reach this method
+router.use('/', function (req, res, next) {
+    // check token before process the request
+    jwt.verify(req.query.token, 'secret', function (err, decoded) {
+        if (err) {
+            return res.status(401).json({
+                title: 'Not Authenticated',
+                error: err
+            });
+        }
+        next();
+    })
+  })
+});
+```
+
+
+## Menu
+```
+  <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
+  <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+```
+
+
