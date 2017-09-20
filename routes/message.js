@@ -48,7 +48,7 @@ router.post('/', function (req, res, next) {
     // link user and message
     var message = new Message({
       content: req.body.content,
-      user: user          // message.user
+      user: user._id         // message.user
     });
     message.save(function (err, result) {
       if (err) {
