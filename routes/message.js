@@ -36,6 +36,7 @@ router.use('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
+  // get user info from the token
   var decoded = jwt.decode(req.query.token);
   User.findById(decoded.user._id, function (err, user) {
     if (err) {
@@ -44,9 +45,10 @@ router.post('/', function (req, res, next) {
         error: err
       });
     }
+    // link user and message
     var message = new Message({
       content: req.body.content,
-      user: user
+      user: user          // message.user
     });
     message.save(function (err, result) {
       if (err) {
@@ -56,7 +58,7 @@ router.post('/', function (req, res, next) {
         });
       }
       user.messages.push(result);
-      user.save();
+      user.save();       // user.messages
       res.status(201).json({
         message: 'Saved message',
         obj: result

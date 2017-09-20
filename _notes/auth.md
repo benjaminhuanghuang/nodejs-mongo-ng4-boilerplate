@@ -54,12 +54,33 @@ router.use('/', function (req, res, next) {
   })
 });
 ```
+## Get user info from token at server side
+```
+router.post('/', function (req, res, next) {
+  var decoded = jwt.decode(req.query.token);
+  User.findById(decoded.user._id, function (err, user) {
+    
+  }
+}
+```
+
 
 
 ## Menu
+Template
 ```
   <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
   <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+
+
 ```
+Inject service into component
+```
+  export class AuthenticationComponent {
+      constructor(private authService: AuthService) {}
 
-
+      isLoggedIn() {
+          return this.authService.isLoggedIn();
+      }
+  }
+```
